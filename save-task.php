@@ -14,7 +14,7 @@ $fileName = time() . "_" . preg_replace("/[^a-zA-Z0-9.\-_]/", "", $fileName);
 $storageAccount = "storagepraktikum015";
 $container      = "praktikumsubmit-015";
 
-$sasToken = "sv=2026-02-06&ss=bf&srt=sco&sp=rwlaciytfx&se=2026-06-16T02:53:09Z&st=2026-06-15T18:38:09Z&spr=https&sig=joiOmGO%2FylAPW%2FXhlKKPhZKBXFdi7Dctcq8RAbIyA%2Fo%3D";
+$sasToken = "sv=2026-02-06&ss=bf&srt=sco&sp=rwdlaciytfx&se=2026-06-19T17:07:37Z&st=2026-06-16T08:52:37Z&spr=https&sig=8mxZ3Ks2IxbO1SPIKbCbvh1bvhOPLyTlt8Dtx33v8WU%3D";
 
 $uploadUrl = "https://$storageAccount.blob.core.windows.net/$container/$fileName?$sasToken";
 
