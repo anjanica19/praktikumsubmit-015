@@ -32,8 +32,14 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($ch);
 
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
 if (curl_errno($ch)) {
     die("Upload gagal: " . curl_error($ch));
+}
+
+if ($httpCode != 201) {
+    die("Azure upload gagal. HTTP Code: " . $httpCode . "<br><pre>" . htmlspecialchars($response) . "</pre>");
 }
 
 curl_close($ch);
